@@ -1,12 +1,13 @@
 #sliderContainer {
-  width: inital;
+  width: inital;  
 }
 
 #slider {
-  margin: inherit;
+  margin-bottom: 5px;
   border: inherit inherit inherit;
   height: inital;
   width: inital;
+  display: table-cell;
 }
 
 #slider:hover, #slider:hover>span, button {

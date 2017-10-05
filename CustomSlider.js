@@ -11,12 +11,13 @@ $(document).ready(function() {
     var spanMax;
     var sliderValue;
     var styleObj;
+    var value;
 
-    var sliderSettings = function(min, max, currentValue, height, width, background, borderProps, handleProps, margin) {
+    var sliderSettings = function(valuesProps, height, width, background, borderProps, handleProps, valueStyle) {
       $("#slider").slider({
-        min: min,
-        max: max,
-        value: currentValue,
+        min: valuesProps.min,
+        max: valuesProps.max,
+        value: valuesProps.currentValue,
         change: function(event, ui) {
           showValue(ui.value);
         },
@@ -28,6 +29,12 @@ $(document).ready(function() {
         }
       });
 
+      value = valuesProps.currentValue;
+
+      heightToConvert = height;
+      handleHeightNum = parseInt(heightToConvert, 10);
+      handleHeightStr = heightToConvert.replace(/[0-9]/g, '');
+
       styleObj = {
         height: height,
         width: width,
@@ -37,30 +44,38 @@ $(document).ready(function() {
           bordrStyle: "solid",
           borderColor: borderProps.color
         },
-        margin: margin,
         handle: {
           backgroundColor: handleProps.color,
           borderRadius: handleProps.borderRadius,
+          height: "inherit",
+          width: handleHeightNum + handleHeightStr
         },
+        valueStyle: {
+          color: valueStyle.color,
+          fontFamily: valueStyle.fontFamily
+        }
       }
 
-      styler("#sliderContainer", styleObj);
+      styler("#slider", styleObj);
     }
-
-    //todo - deal with border
 
     //Set slider's style by given values
     var styler = function(el, propObj) {
       Object.keys(propObj).map(function(key, index) {
         if (typeof(propObj[key]) !== "object") {
+          if (key === "height" || key === "width") {
+            $(el).parent().css(key, propObj[key]);
+          }
           $(el).css(key, propObj[key]);
         } else {
           Object.keys(propObj[key]).map(function(secKey, index) {
-            if(key === "handle"){
-              originalEl = el;
-              el = ".ui-slider-handle";
+            if (key === "handle") {
+              $(el + " span:first-child").css(secKey, propObj[key][secKey]);
+            } else if (key === "valueStyle") {
+              $(el).parent().css(secKey, propObj[key][secKey]);
+            } else {
+              $(el).css(secKey, propObj[key][secKey]);
             }
-            $(el).css(secKey, propObj[key][secKey]);
           })
         }
       })
@@ -90,15 +105,22 @@ $(document).ready(function() {
     var init = function() {
       cacheDom();
       buildSlider("body");
-      sliderSettings(1, 10, 1, "5vh", "50vh", "green", {
+      sliderSettings({
+        "min": 0,
+        "max": 10,
+        "currentValue": 1
+      }, "3vh", "40vh", "green", {
         "thickness": "3px",
         "color": "blue"
       }, {
         "color": "black",
         "borderRadius": "50px"
-      }, "10px");
+      }, {
+        "color": "yellow",
+        "fontFamily": "serif"
+      });
       getRange();
-      showValue(0);
+      showValue(value);
     }
 
     //Get the min and max values of the slider
