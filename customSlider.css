@@ -1,11 +1,12 @@
 #sliderContainer {
-  width: 50vw;
+  width: inital;
 }
 
 #slider {
-  margin: 10px;
-  border: 1px solid black;
-  height: 10px;
+  margin: inherit;
+  border: inherit inherit inherit;
+  height: inital;
+  width: inital;
 }
 
 #slider:hover, #slider:hover>span, button {
