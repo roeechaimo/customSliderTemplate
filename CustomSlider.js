@@ -152,7 +152,7 @@ var CustomSlider = (function() {
 
   //Return the current slider's value
   var getValue = function() {
-    value = $("#slider").slider("option", "value");    
+    value = $("#slider").slider("option", "value");
     return value;
   }
 
