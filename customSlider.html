@@ -6,24 +6,45 @@
   <link rel="stylesheet" href="customSlider.css">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src="CustomSlider.js"></script>
 </head>
 
 <body>
+  <button onclick="getValue()">Get Value</button>
+  <h3></h3>
 
-  <!-- <div id="sliderContainer">
-    <div id="slider"></div>
-    <div id="rangeContainer">
-      <div id="min">
-        <span>..</span>
-      </div>
-      <div id="max">
-        <span>..</span>
-      </div>
-    </div>
-  </div> -->
+  <script>
+    var settings = {
+      "valuesProps": {
+        "min": 0,
+        "max": 10,
+        "currentValue": 0,
+        "show": true
+      },
+      "height": "20px",
+      "width": "300px",
+      "backgroundColor": "grey",
+      "borderProps": {
+        "borderThickness": "3px",
+        "sliderBorderColor": "black",
+        "sliderBorderRadius": "50px"
+      },
+      "handleProps": {
+        "handleColor": "blue",
+        "handleBorderRadius": "50%"
+      },
+      "valueStyle": {
+        "valuesColor": "black",
+        "fontFamily": "sans-serif"
+      }
+    };
+    CustomSlider.init("body", settings);
 
-
-  <script src="CustomSlider.js"></script>
+    function getValue() {
+      var valueToPresent = CustomSlider.getValue();
+      document.querySelector("h3").innerHTML = valueToPresent;
+    }
+  </script>
 </body>
 
 </html>
