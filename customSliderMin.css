@@ -1,1 +1,1 @@
-#slider,#sliderContainer{width:inital}#slider{margin-bottom:5px;border:inherit;height:inital;display:table-cell}#slider:hover,#slider:hover>span,button{cursor:pointer}#rangeContainer{display:flex;justify-content:space-between}
+#slider,#sliderContainer{width:inital}#slider{margin-bottom:5px;height:inital;display:flex;flex-direction:column;justify-content:center;}#slider:hover,#slider:hover>span{cursor:pointer}#slider>span{top:initial;}#rangeContainer{display:flex;justify-content:space-between}

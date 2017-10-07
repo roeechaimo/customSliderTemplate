@@ -7,16 +7,20 @@
   border: inherit inherit inherit;
   height: inital;
   width: inital;
-  display: table-cell;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#slider:hover, #slider:hover>span, button {
+#slider:hover, #slider:hover>span {
   cursor: pointer;
+}
+
+#slider>span {
+  top: initial;
 }
 
 #rangeContainer {
   display: flex;
   justify-content: space-between;
 }
-
-/*todo - on minified css - browser wont read correctly*/
