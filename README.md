@@ -6,13 +6,21 @@ Place the custonSlider.css or custonSliderMin.css file inside a link tag, just b
 Afterwards, place the customSlider.js or customSliderMin.js file inside a script tag, just beneath the jquery and jquery-ui script tag.
 
 For Example:
+
 head
+
   link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+  
   link rel="stylesheet" href="plugins/customSliderMin.css"
+  
   script src="https://code.jquery.com/jquery-3.2.1.min.js" script
+  
   script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" script
+  
   script src="plugins/CustomSliderMin.js" script
+  
 head
+
 
 # In the JS
 First, define the element you want the slider to append to.
