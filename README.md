@@ -45,11 +45,11 @@ Then, define the slider's settings like this:
     
   `},`
   
-  "height": string,
+  `"height": string,
   
   "width": string,
   
-  "backgroundColor": string,
+  "backgroundColor": string,`
   
   `"borderProps": {`
   
