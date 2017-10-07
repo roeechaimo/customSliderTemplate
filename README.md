@@ -7,19 +7,19 @@ Afterwards, place the customSlider.js or customSliderMin.js file inside a script
 
 For Example:
 
-*<head>
+head
 
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
   
-  <link rel="stylesheet" href="plugins/customSliderMin.css">
+  link rel="stylesheet" href="plugins/customSliderMin.css"
   
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" </script>
+  script src="https://code.jquery.com/jquery-3.2.1.min.js" script
   
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" </script>
+  script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" script
   
-  <script src="plugins/CustomSliderMin.js" </script>
+  script src="plugins/CustomSliderMin.js" script
   
-</head>*
+head
 
 
 # In the JS
@@ -31,9 +31,9 @@ For example:
 
 Then, define the slider's settings like this:
 
-`var settings = {
+`var settings = {`
 
-  "valuesProps": {
+  `"valuesProps": {`
   
     "min": integer,
     
@@ -43,7 +43,7 @@ Then, define the slider's settings like this:
     
     "show": boolean
     
-  },
+  `},`
   
   "height": string,
   
@@ -51,7 +51,7 @@ Then, define the slider's settings like this:
   
   "backgroundColor": string,
   
-  "borderProps": {
+  `"borderProps": {`
   
     "borderThickness": string,
     
@@ -59,25 +59,25 @@ Then, define the slider's settings like this:
     
     "sliderBorderRadius": string
     
-  },
+  `},`
   
-  "handleProps": {
+  `"handleProps": {`
   
     "handleColor": string,
     
     "handleBorderRadius": string
     
-  },
+  `},`
   
-  "valueStyle": {
+  `"valueStyle": {`
   
     "valuesColor": string,
     
     "fontFamily": string
     
-  }
+  `}`
   
-};`
+`};`
 
 To initiate your settings, run `CustomSlider.init(element, settings);`
 
