@@ -7,7 +7,7 @@ Afterwards, place the customSlider.js or customSliderMin.js file inside a script
 
 For Example:
 
-`<head>
+*<head>
 
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   
@@ -19,7 +19,7 @@ For Example:
   
   <script src="plugins/CustomSliderMin.js" </script>
   
-</head>`
+</head>*
 
 
 # In the JS
