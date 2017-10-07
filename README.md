@@ -7,19 +7,19 @@ Afterwards, place the customSlider.js or customSliderMin.js file inside a script
 
 For Example:
 
-head
+`<head>
 
-  link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   
-  link rel="stylesheet" href="plugins/customSliderMin.css"
+  <link rel="stylesheet" href="plugins/customSliderMin.css">
   
-  script src="https://code.jquery.com/jquery-3.2.1.min.js" script
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" </script>
   
-  script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" script
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" </script>
   
-  script src="plugins/CustomSliderMin.js" script
+  <script src="plugins/CustomSliderMin.js" </script>
   
-head
+</head>`
 
 
 # In the JS
@@ -27,11 +27,11 @@ First, define the element you want the slider to append to.
 
 For example:
 
-var element = "body"; 
+`var element = "body"; `
 
 Then, define the slider's settings like this:
 
-var settings = {
+`var settings = {
 
   "valuesProps": {
   
@@ -77,13 +77,13 @@ var settings = {
     
   }
   
-};
+};`
 
-To initiate your settings, run CustomSlider.init(element, settings);
+To initiate your settings, run `CustomSlider.init(element, settings);`
 
-You can get the range you set by running the CustomSlider.getRange() function.
+You can get the range you set by running the `CustomSlider.getRange()` function.
 
-You can get the current value of the slider's handle by running the CustomSlider.getValue() function.
+You can get the current value of the slider's handle by running the `CustomSlider.getValue()` function.
 
 # The options
 "valuesProps" - set the range and starting values of the slider->
